@@ -23,6 +23,7 @@ namespace MyExampleLibrary
                 BasicCalculator.Initialize();
                 ExampleUList1.Initialize();
                 MyMiniGuessGame.Initialize();
+                ExceptionHandlingTests.Initialize();
 
                 Console.ReadLine();
             }
