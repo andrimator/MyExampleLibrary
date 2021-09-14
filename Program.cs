@@ -1,5 +1,7 @@
 ﻿using System;
 using MyExampleLibrary.Instances;
+using MyExampleLibrary.MiniGuessGame;
+using MyExampleLibrary.Objects;
 
 namespace MyExampleLibrary
 {
