@@ -93,6 +93,26 @@ namespace MyExampleLibrary.Objects
         public double x = 0;
         public double y = 0;
 
+        public Vector2D(int tx, int ty)
+        {
+            x = tx; y = ty;
+        }
+        public Vector2D() { }
+        public void CheckPos()
+        {
+            Console.WriteLine("X: " + x + ", Y: " + y);
+        }
+    }
+    class IntVector2D
+    {
+        public int x = 0;
+        public int y = 0;
+
+        public IntVector2D(int tx, int ty)
+        {
+            x = tx; y = ty;
+        }
+        public IntVector2D() { }
         public void CheckPos()
         {
             Console.WriteLine("X: " + x + ", Y: " + y);
