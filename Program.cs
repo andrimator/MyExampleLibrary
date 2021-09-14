@@ -6,7 +6,7 @@ namespace MyExampleLibrary
     {
         static void Main(string[] args)
         {
-            
+            MainMenu.Initialize();
             Console.WriteLine("Hello World!");
         }
     }

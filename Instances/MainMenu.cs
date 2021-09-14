@@ -4,19 +4,30 @@ using System.Text;
 
 namespace MyExampleLibrary
 {
-    class MainMenu
+    public class MainMenu
     {
-        public void DrawGUI()
+        public static int Elements = 5;
+
+
+        public static void Initialize()
+        {
+            DrawGUI();
+            GetInput();
+        }
+
+
+        public static void DrawGUI()
         {
             //Este metodo dibujara el menu
         }
 
-        public int GetInput()
+        public static int GetInput()
         {
             int input = 0;
             Console.Write("Input: ");
             while (input == 0)
             {
+                Console.Write("[Error] Input: ");
                 try
                 {
                     input = Convert.ToInt32(Console.ReadLine());

@@ -13,7 +13,7 @@ namespace MyExampleLibrary
 
     class ConstructorExamples
     {
-        static void Main(string[] args)
+        static void ConstructorExamplesMethod()
         {
 
             Game Halo = new Game("Halo", "Xbox", "A");
