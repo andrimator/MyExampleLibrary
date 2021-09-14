@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyExampleLibrary.Objects;
 
 namespace MyExampleLibrary
 {
     /*Using:
-     * Cock.cs
-     * Game.cs
+     * Objects.cs
      */
 
     class ConstructorExamples
