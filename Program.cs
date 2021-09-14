@@ -1,4 +1,5 @@
 ﻿using System;
+using MyExampleLibrary.Instances;
 
 namespace MyExampleLibrary
 {
@@ -6,8 +7,9 @@ namespace MyExampleLibrary
     {
         static void Main(string[] args)
         {
-            MainMenu.Initialize();
+            Menu.Initialize();
             Console.WriteLine("Hello World!");
+            Console.ReadLine();
         }
     }
 }

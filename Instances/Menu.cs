@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyExampleLibrary
+namespace MyExampleLibrary.Instances
 {
-    public class MainMenu
+    public class Menu
     {
-        public static int Elements = 5;
+        public static int MainElements = 5;
 
 
         public static void Initialize()
