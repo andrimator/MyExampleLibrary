@@ -50,26 +50,27 @@ namespace MyExampleLibrary
         {
             Graphics.DrawMargin(sizex,sizey,instanceName);
         }
-        public void LoadList(string[] list, int elements)
+        public void LoadPickList(string[] list, int elements)
         {
             Console.SetCursorPosition(0,1);
             Console.WriteLine(list[0]);
             Console.WriteLine(list[1]);
             Console.WriteLine(list[2]);
+            Input.GetInt();
         }
+        public static void Exit()
+        {
 
-        
+        }
     }
     public class Input
     {
         public static int GetInt()
         {
-            Console.SetCursorPosition(2,2);
             int input = 0;
-            Console.Write("Input: ");
             while (input == 0)
             {
-                Console.Write(" [Error] Input: ");
+                Console.Write("Input: ");
                 try
                 {
                     input = Convert.ToInt32(Console.ReadLine());

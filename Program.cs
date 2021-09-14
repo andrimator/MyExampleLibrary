@@ -17,8 +17,7 @@ namespace MyExampleLibrary
                 Console.Clear();
                 Menu MainMenu = new Menu("Menu Principal", 1, false, MenuSize.x, MenuSize.y);
                 MainMenu.Initialize();
-                MainMenu.LoadList(listMenu,3);
-                Input.GetInt();
+                MainMenu.LoadPickList(listMenu,3);
                 Console.ReadLine();
 
                 BasicCalculator.Initialize();
