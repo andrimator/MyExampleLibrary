@@ -1,7 +1,7 @@
 ﻿using System;
 using MyExampleLibrary.Instances;
-using MyExampleLibrary.MiniGuessGame;
 using MyExampleLibrary.Objects;
+using MiniGuessGame;
 
 namespace MyExampleLibrary
 {
@@ -10,6 +10,8 @@ namespace MyExampleLibrary
         public static bool isRunning = true;
         static void Main(string[] args)
         {
+            ExampleUList1.Initialize();
+            MyMiniGuessGame.Initialize();
             while(Program.isRunning == true)
             {
                 Console.Clear();

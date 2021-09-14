@@ -14,23 +14,18 @@ namespace MyExampleLibrary.Instances
         public int sizey;
 
         public Menu(string aname, int aid, bool debugMode, int sizeX, int sizeY)
-        {
+        {//Menu Constructor
             instanceName = aname;
             id = aid;
             debug = debugMode;
             sizex = sizeX;
             sizey = sizeY;
-
-            
         }
-
         public void Initialize()
         {
             DrawMargin(sizex,sizey,instanceName);
             Input.GetInt();
         }
-
-
         private static void DrawMargin(int x, int y, string name)
         {
             int tx, ty;
