@@ -29,10 +29,10 @@ namespace MyExampleLibrary
         {
             //Bidimentional Array
             int[,] numberGrid =
-            {
-                {1, 2, 3},
-                {4, 5, 6},
-                {7, 8, 9},
+            {       /*Y- Y- Y*/
+                /*X*/{1, 2, 3},
+                /*X*/{4, 5, 6},
+                /*X*/{7, 8, 9},
             };
 
             //ConsoleWriteLine(variable[x, y]);
