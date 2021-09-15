@@ -58,31 +58,11 @@ namespace MyExampleLibrary
 
         }
     }
-    public class Input
-    {
-        public static int GetInt()
-        {
-            int input = 0;
-            while (input == 0)
-            {
-                Console.Write("Input: ");
-                try
-                {
-                    input = Convert.ToInt32(Console.ReadLine());
-                }
-                catch (SystemException)
-                {
-
-                }
-            }
-            return input;
-        }
-    }
     public class Graphics
     {
         public static bool usingMargin;
-        private static void SetPoint(int x, int y) { Console.SetCursorPosition(x, y); }
-        private static void Draw(string text) { Console.Write(text); }
+        public static void SetPoint(int x, int y) { Console.SetCursorPosition(x, y); }
+        public static void Draw(string text) { Console.Write(text); }
         public static void DrawMargin(int x, int y, string name, string titleColor)
         {
             int tx, ty;
