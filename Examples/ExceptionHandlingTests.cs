@@ -10,6 +10,8 @@ namespace MyExampleLibrary
     {
         public static void Initialize()
         {
+            Console.Clear();
+            Console.SetCursorPosition(0, 0);
             try
             {
                 Console.Write("Enter a number: ");

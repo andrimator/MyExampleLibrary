@@ -12,6 +12,8 @@ namespace MyExampleLibrary
     {
         public static void Initialize()
         {
+            Console.Clear();
+            Console.SetCursorPosition(0, 0);
             //Bienvenido al Hub, sientate y ponte cómodo..
             //Exercise1(true, true);
             //GetMax2(23, 65);

@@ -17,6 +17,8 @@ namespace OpenBasicCalculator
     {
         public static void Initialize()
         {
+            Console.Clear();
+            Console.SetCursorPosition(0, 0);
             Title();
             ModeSelect();
         }

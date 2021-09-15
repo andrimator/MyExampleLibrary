@@ -22,7 +22,9 @@ namespace MiniGuessGame
     {
         public static void Initialize()
         {
-            while(true)
+            Console.Clear();
+            Console.SetCursorPosition(0, 0);
+            while (true)
             {
                 Console.Clear();
                 DrawSeparator(35);

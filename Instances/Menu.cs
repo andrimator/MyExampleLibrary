@@ -46,16 +46,11 @@ namespace MyExampleLibrary
             Mode = mode;
         }
         #endregion
-        public void Initialize()
+        public void Initialize() //When the menu is created.
         {
-            Graphics.DrawMargin(sizex,sizey,instanceName);
         }
-        public void LoadPickList(string[] list, int elements)
+        public void GetUserInput(string[] list, int elements)
         {
-            Console.SetCursorPosition(0,1);
-            Console.WriteLine(list[0]);
-            Console.WriteLine(list[1]);
-            Console.WriteLine(list[2]);
             Input.GetInt();
         }
         public static void Exit()
@@ -85,7 +80,10 @@ namespace MyExampleLibrary
     }
     public class Graphics
     {
-        public static void DrawMargin(int x, int y, string name)
+        public static bool usingMargin;
+        private static void SetPoint(int x, int y) { Console.SetCursorPosition(x, y); }
+        private static void Draw(string text) { Console.Write(text); }
+        public static void DrawMargin(int x, int y, string name, string titleColor)
         {
             int tx, ty;
             tx = x; ty = y;
@@ -113,13 +111,51 @@ namespace MyExampleLibrary
                 Console.Write("|");
                 ty--;
             }
-            //Window Name
+            //Window 
+            switch (titleColor)
+            {
+                case "green": Console.ForegroundColor = ConsoleColor.Green; break;
+                case "red": Console.ForegroundColor = ConsoleColor.Red; break;
+                default: break;
+            }
             Console.SetCursorPosition((x - name.Length) / 2, 0);
             Console.Write("["+name+"]");
             //Footer
+            Console.ForegroundColor = ConsoleColor.White;
             name = "[created by andrimator]";
             Console.SetCursorPosition((x - name.Length) / 2, y);
             Console.Write(name);
+            usingMargin = true;
         }
+        public static void DrawList(string[] list, int posX, int posY)
+        {
+            int[] startPos = { 0, 0 };
+            int x, y;
+            x = posX;
+            y = posY;
+            startPos[0] = x;
+            startPos[1] = y;
+            x = 2; y = 2;
+            try
+            {
+                SetPoint(x, y); Draw(list[0]);
+                SetPoint(x, y + 1); Draw(list[1]);
+                SetPoint(x, y + 2); Draw(list[2]);
+                SetPoint(x, y + 3); Draw(list[3]);
+                SetPoint(x, y + 4); Draw(list[4]);
+                SetPoint(x, y + 5); Draw(list[5]);
+                SetPoint(x, y + 6); Draw(list[6]);
+                SetPoint(x, y + 7); Draw(list[7]);
+                SetPoint(x, y + 8); Draw(list[8]);
+                SetPoint(x, y + 9); Draw(list[9]);
+            }
+            catch (SystemException)
+            {
+
+            }
+            
+        }
+        
+        
     }
 }
