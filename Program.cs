@@ -10,7 +10,8 @@ namespace MyExampleLibrary
         public static bool stillRunning = true;
         static void Main(string[] args)
         {
-            while (Program.stillRunning == true)
+            AsyncAwaitTasks.Initialize();
+            /*while (Program.stillRunning == true)
             {
                 Instance.MainMenu();
 
@@ -21,7 +22,7 @@ namespace MyExampleLibrary
                 ExceptionHandlingTests.Initialize();
 
                 Console.ReadLine();
-            }
+            }*/
             
         }
     }

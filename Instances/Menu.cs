@@ -51,7 +51,6 @@ namespace MyExampleLibrary
         }
         public void GetUserInput(string[] list, int elements)
         {
-            Input.GetInt();
         }
         public static void Exit()
         {
@@ -135,7 +134,41 @@ namespace MyExampleLibrary
             }
             
         }
-        
-        
+        public static int GetInputInt(int posx, int posy)
+        {
+            int input = 0;
+            bool validData = false;
+            while (validData == false)
+            {
+                SetPoint(posx, posy);
+                Console.Write("Elige una opción de la lista: ");
+                try
+                {
+                    input = Convert.ToInt32(Console.ReadLine());
+                    switch (input)
+                    {
+                        case 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9:
+                            validData = true;
+                            break;
+                        default:
+                            Graphics.SetPoint(posy, posx);
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("¡Debes escribir un numero de la lista");
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                            break;
+                    }
+                }
+                catch (SystemException)
+                {
+                    Graphics.SetPoint(posy, posx);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("¡Debes escribir solo numeros!");
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                }
+            }
+            return input;
+        }
+
+
     }
 }
